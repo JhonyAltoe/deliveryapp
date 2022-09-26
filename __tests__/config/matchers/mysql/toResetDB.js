@@ -1,3 +1,4 @@
+
 const { result } = require("../../utils/assertionAux");
 const resetDB = require("../../utils/resetDB");
 
@@ -25,3 +26,4 @@ async function toResetDB(database) {
 }
 
 module.exports = toResetDB;
+
