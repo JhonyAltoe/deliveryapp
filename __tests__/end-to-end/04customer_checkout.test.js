@@ -30,7 +30,7 @@ beforeEach(async () => {
   ).toBeTruthy();
 });
 
-describe.only(requirement(17), () => {
+describe(requirement(17), () => {
   test("O avaliador testará os data-testids referentes aos itens do carrinho e demais elementos", async () => {
     for (let i = zero; i < itemList.cart.length; i += one) {
       await expect(page).toFindElement(
@@ -149,7 +149,7 @@ describe(requirement(20), () => {
   });
 });
 
-describe(requirement(21), () => {
+describe.only(requirement(21), () => {
   test("O avaliador testará se, após realizado o checkout, as alterações constarão no banco de dados", async () => {
     const { saleId, saleDate } = await action.customer.checkoutNewSale(
       page,
